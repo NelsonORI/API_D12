@@ -7,7 +7,7 @@ class forms{
     public function signup(){
         ?>
         <h2>Signup Form</h2>
-        <form action='submit_signup.php' method='post'>
+        <form action='mail.php' method='post'>
             <label for='username'>Username:</label>
             <input type='text' id='username' name='username' required><br><br>
             <label for='email'>Email:</label>
