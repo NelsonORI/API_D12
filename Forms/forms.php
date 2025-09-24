@@ -1,34 +1,73 @@
 <?php
-class forms{
-    private function submit_button($value){
-        echo "<input type='submit' value='{$value}'>";
+class forms {
+    private function submit_button($value, $class = 'btn-primary') {
+        echo "<button type='submit' class='btn $class btn-lg w-100'>$value</button>";
     }
 
-    public function signup(){
+    public function signup() {
         ?>
-        <h2>Signup Form</h2>
-        <form action='mail.php' method='post'>
-            <label for='username'>Username:</label>
-            <input type='text' id='username' name='username' required><br><br>
-            <label for='email'>Email:</label>
-            <input type='email' id='email' name='email' required><br><br>
-            <label for='password'>Password:</label>
-            <input type='password' id='password' name='password' required><br><br>
-            <?php $this->submit_button('Sign Up'); ?> <a href="login.php">Already have an account? Log in</a>
-        </form>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="form-container">
+                    <h2 class="text-center mb-4">Create Your Account</h2>
+                    <form action='mail.php' method='post'>
+                        <div class="mb-3">
+                            <label for='username' class="form-label">Username:</label>
+                            <input type='text' class="form-control form-control-lg" id='username' name='username' required>
+                        </div>
+                        <div class="mb-3">
+                            <label for='email' class="form-label">Email:</label>
+                            <input type='email' class="form-control form-control-lg" id='email' name='email' required>
+                        </div>
+                        <div class="mb-3">
+                            <label for='password' class="form-label">Password:</label>
+                            <input type='password' class="form-control form-control-lg" id='password' name='password' required>
+                        </div>
+                        <div class="mb-3">
+                            <?php $this->submit_button('Sign Up'); ?>
+                        </div>
+                        <div class="text-center mt-3">
+                            <a href="login.php">Already have an account? Log in</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
         <?php
     }
 
-    public function login(){
+    public function login() {
+        // Display error message if authentication failed
+        $error = '';
+        if (isset($_GET['error']) && $_GET['error'] == 1) {
+            $error = '<div class="alert alert-danger">Invalid username or password.</div>';
+        }
         ?>
-        <h2>Login Form</h2>
-        <form action='submit_login.php' method='post'>
-            <label for='username'>Username:</label>
-            <input type='text' id='username' name='username' required><br><br>
-            <label for='password'>Password:</label>
-            <input type='password' id='password' name='password' required><br><br>
-            <?php $this->submit_button('Log In'); ?> <a href="index.php">Don't have an account? Sign up</a>
-        </form>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="form-container">
+                    <h2 class="text-center mb-4">Login to Your Account</h2>
+                    <?php echo $error; ?>
+                    <form action='authenticate.php' method='post'>
+                        <div class="mb-3">
+                            <label for='username' class="form-label">Username:</label>
+                            <input type='text' class="form-control form-control-lg" id='username' name='username' required>
+                        </div>
+                        <div class="mb-3">
+                            <label for='password' class="form-label">Password:</label>
+                            <input type='password' class="form-control form-control-lg" id='password' name='password' required>
+                        </div>
+                        <div class="mb-3">
+                            <?php $this->submit_button('Log In'); ?>
+                        </div>
+                        <div class="text-center mt-3">
+                            <a href="index.php">Don't have an account? Sign up</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
         <?php
     }
 }
+?>

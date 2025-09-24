@@ -1,8 +1,8 @@
 <?php
 // Site configuration
-$conf['site_name'] = "BBIT DevOps";
-$conf['site_email'] = "info@bbit.edu";
-$conf['site_url'] = "http://localhost/dol";
+$conf['site_name'] = "Tickify";
+$conf['site_email'] = "info@tickyfii.com";
+$conf['site_url'] = "http://localhost/API_D12";
 
 // Site language
 $conf['language'] = "en";
@@ -11,5 +11,5 @@ $conf['language'] = "en";
 $conf['db_type'] = "pdo";
 $conf['db_host'] = "localhost";
 $conf['db_user'] = "root";
-$conf['db_pass'] = "";
-$conf['db_name'] = "dol";
+$conf['db_pass'] = "root";
+$conf['db_name'] = "grp";
