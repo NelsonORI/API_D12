@@ -11,5 +11,5 @@ $conf['language'] = "en";
 $conf['db_type'] = "pdo";
 $conf['db_host'] = "localhost";
 $conf['db_user'] = "root";
-$conf['db_pass'] = "1234";
+$conf['db_pass'] = "root";
 $conf['db_name'] = "grp";
