@@ -1,4 +1,4 @@
-<?php
+.<?php
 class forms {
     private function submit_button($value, $class = 'btn-primary') {
         echo "<button type='submit' class='btn $class btn-lg w-100'>$value</button>";
@@ -61,6 +61,7 @@ class forms {
                             <?php $this->submit_button('Log In'); ?>
                         </div>
                         <div class="text-center mt-3">
+                            <a href="password_reset.php" class="d-block mb-2">Forgot your password?</a>
                             <a href="index.php">Don't have an account? Sign up</a>
                         </div>
                     </form>

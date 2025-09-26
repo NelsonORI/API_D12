@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Prepare SQL statement to prevent SQL injection
     try {
-        $stmt = $pdo->prepare("SELECT id, username, password, email FROM project WHERE username = :username");
+        $stmt = $pdo->prepare("SELECT id, username, password, email, role FROM project WHERE username = :username");
         $stmt->bindParam(':username', $username);
         $stmt->execute();
         
@@ -45,6 +45,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $_SESSION['user_id'] = $user['id'];
                 $_SESSION['username'] = $user['username'];
                 $_SESSION['user_email'] = $user['email'];
+                $_SESSION['role'] = $user['role'] ?? 'user'; // Added role to session
                 $_SESSION['otp'] = $otp;
                 $_SESSION['otp_expiry'] = time() + 300; // 5 minutes
                 $_SESSION['loggedin'] = false; // Not fully logged in until 2FA
