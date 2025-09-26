@@ -26,9 +26,6 @@ class OrderManager {
             $orderStmt = $this->pdo->prepare("INSERT INTO `order` (user_id, event_id, quantity, total_amount) VALUES (?, ?, ?, ?)");
             $orderStmt->execute([$userId, $eventId, $quantity, $totalAmount]);
 
-            // REMOVED inventories reference since table doesn't exist
-            // If you need inventories, create the table first
-
             // Update event available tickets
             $eventUpdateStmt = $this->pdo->prepare("UPDATE event SET available_tickets = available_tickets - ? WHERE id = ?");
             $eventUpdateStmt->execute([$quantity, $eventId]);
@@ -84,7 +81,6 @@ class OrderManager {
             $statusStmt = $this->pdo->prepare("UPDATE `order` SET status = 'cancelled' WHERE id = ?");
             $statusStmt->execute([$orderId]);
 
-            // REMOVED inventories reference
 
             // Restore tickets to event
             $eventStmt = $this->pdo->prepare("UPDATE event SET available_tickets = available_tickets + ? WHERE id = ?");
