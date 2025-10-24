@@ -10,7 +10,7 @@ class MpesaService {
     
     public function __construct() {
         // Load configuration
-        $confFile = __DIR__ . '/../conf.php';
+        $confFile = _DIR_ . '/../conf.php';
         if (!file_exists($confFile)) {
             throw new Exception('Configuration file not found: ' . $confFile);
         }
@@ -200,7 +200,7 @@ class MockMpesaService {
 
 // Auto-detect which service to use based on configuration
 function getMpesaService() {
-    $confFile = __DIR__ . '/../conf.php';
+    $confFile = _DIR_ . '/../conf.php';
     if (!file_exists($confFile)) {
         return new MockMpesaService();
     }
