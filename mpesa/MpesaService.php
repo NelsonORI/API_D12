@@ -10,7 +10,7 @@ class MpesaService {
     
     public function __construct() {
         // Load configuration
-        $confFile = _DIR_ . '/../conf.php';
+        $confFile = __DIR__ . '/../conf.php';
         if (!file_exists($confFile)) {
             throw new Exception('Configuration file not found: ' . $confFile);
         }
@@ -41,7 +41,6 @@ class MpesaService {
         error_log("M-Pesa Config Loaded - Key exists: " . (!empty($this->consumerKey) ? 'Yes' : 'No'));
     }
     
-    // [Keep all the other methods the same as before...]
     /**
      * Get access token from M-Pesa API
      */
@@ -105,8 +104,17 @@ class MpesaService {
             throw new Exception('Invalid phone number format');
         }
         
+        // FIX: Better amount validation and formatting
         if (!is_numeric($amount) || $amount <= 0) {
-            throw new Exception('Invalid amount');
+            throw new Exception('Invalid amount: ' . $amount);
+        }
+        
+        // For sandbox, ensure amount is a whole number
+        if ($this->environment === 'sandbox') {
+            $amount = intval(ceil($amount));
+            if ($amount < 1) {
+                $amount = 1;
+            }
         }
         
         // Get access token
@@ -121,7 +129,7 @@ class MpesaService {
             'Password' => $password,
             'Timestamp' => $timestamp,
             'TransactionType' => 'CustomerPayBillOnline',
-            'Amount' => $amount,
+            'Amount' => $amount,  // Use the validated amount
             'PartyA' => $phone,
             'PartyB' => $this->shortCode,
             'PhoneNumber' => $phone,
@@ -167,6 +175,70 @@ class MpesaService {
         
         return $data;
     }
+
+    /**
+     * Process M-Pesa callback
+     */
+    public function processCallback($callbackData) {
+        // Log the callback data
+        file_put_contents('../logs/mpesa_callback.log', date('Y-m-d H:i:s') . " - " . json_encode($callbackData) . "\n", FILE_APPEND);
+        
+        if (!isset($callbackData['Body']['stkCallback'])) {
+            throw new Exception('Invalid callback data structure');
+        }
+        
+        $stkCallback = $callbackData['Body']['stkCallback'];
+        $merchantRequestID = $stkCallback['MerchantRequestID'] ?? '';
+        $checkoutRequestID = $stkCallback['CheckoutRequestID'] ?? '';
+        $resultCode = $stkCallback['ResultCode'] ?? '';
+        $resultDesc = $stkCallback['ResultDesc'] ?? '';
+        
+        // Get database connection
+        require_once '../db.php';
+        $pdo = getDBConnection();
+        
+        // Update transaction status
+        $status = ($resultCode == 0) ? 'completed' : 'failed';
+        
+        $stmt = $pdo->prepare("
+            UPDATE transactions 
+            SET status = ?, mpesa_response = ?, updated_at = NOW() 
+            WHERE checkout_request_id = ?
+        ");
+        $stmt->execute([$status, json_encode($stkCallback), $checkoutRequestID]);
+        
+        // If payment was successful, update the order status
+        if ($resultCode == 0 && isset($stkCallback['CallbackMetadata']['Item'])) {
+            $items = $stkCallback['CallbackMetadata']['Item'];
+            $mpesaReceiptNumber = '';
+            
+            foreach ($items as $item) {
+                if ($item['Name'] == 'MpesaReceiptNumber') {
+                    $mpesaReceiptNumber = $item['Value'];
+                    break;
+                }
+            }
+            
+            // Get the order ID from the transaction
+            $stmt = $pdo->prepare("SELECT order_id FROM transactions WHERE checkout_request_id = ?");
+            $stmt->execute([$checkoutRequestID]);
+            $transaction = $stmt->fetch(PDO::FETCH_ASSOC);
+            
+            if ($transaction) {
+                // Update order status to confirmed
+                $stmt = $pdo->prepare("UPDATE `order` SET status = 'confirmed' WHERE id = ?");
+                $stmt->execute([$transaction['order_id']]);
+            }
+        }
+        
+        return [
+            'success' => true,
+            'checkout_request_id' => $checkoutRequestID,
+            'status' => $status,
+            'result_code' => $resultCode,
+            'result_desc' => $resultDesc
+        ];
+    }
 }
 
 // For testing without M-Pesa credentials
@@ -193,14 +265,22 @@ class MockMpesaService {
             'ResponseDescription' => 'Success',
             'MerchantRequestID' => 'mock_' . time() . '_' . rand(1000, 9999),
             'CheckoutRequestID' => 'wsco_mock_' . time() . '_' . rand(1000, 9999),
-            'CustomerMessage' => 'Success'
+            'CustomerMessage' => 'Success. Please enter your M-Pesa PIN to complete payment.'
+        ];
+    }
+
+    public function processCallback($callbackData) {
+        // Mock callback processing
+        return [
+            'success' => true,
+            'status' => 'completed'
         ];
     }
 }
 
 // Auto-detect which service to use based on configuration
 function getMpesaService() {
-    $confFile = _DIR_ . '/../conf.php';
+    $confFile = __DIR__ . '/../conf.php';
     if (!file_exists($confFile)) {
         return new MockMpesaService();
     }

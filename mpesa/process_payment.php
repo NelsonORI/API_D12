@@ -1,3 +1,4 @@
+
 <?php
 // process_payment.php - M-Pesa Payment Processing WITH REAL MPESA INTEGRATION
 require_once __DIR__ . '/../db.php';
@@ -284,4 +285,3 @@ try {
     ]);
 }
 ?>
-
