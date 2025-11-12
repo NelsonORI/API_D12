@@ -6489,3 +6489,930 @@
 2025-10-29 12:53:21 - User ID: 1
 2025-10-29 12:53:21 - User orders: 8, Events: 3
 2025-10-29 12:53:21 - Rendering dashboard page
+2025-10-29 13:52:29 - === DASHBOARD ACCESSED ===
+2025-10-29 13:52:29 - Loading required files
+2025-10-29 13:52:29 - Required files loaded successfully
+2025-10-29 13:52:29 - MpesaService loaded successfully
+2025-10-29 13:52:29 - User ID: 1
+2025-10-29 13:52:29 - User orders: 0, Events: 0
+2025-10-29 13:52:29 - Rendering dashboard page
+2025-10-29 13:52:56 - === DASHBOARD ACCESSED ===
+2025-10-29 13:52:56 - Loading required files
+2025-10-29 13:52:56 - Required files loaded successfully
+2025-10-29 13:52:56 - MpesaService loaded successfully
+2025-10-29 13:52:56 - User ID: 1
+2025-10-29 13:52:56 - User orders: 0, Events: 0
+2025-10-29 13:52:56 - Rendering dashboard page
+2025-10-29 13:52:58 - === DASHBOARD ACCESSED ===
+2025-10-29 13:52:58 - Loading required files
+2025-10-29 13:52:58 - Required files loaded successfully
+2025-10-29 13:52:58 - MpesaService loaded successfully
+2025-10-29 13:52:58 - User ID: 1
+2025-10-29 13:52:58 - User orders: 0, Events: 0
+2025-10-29 13:52:58 - Rendering dashboard page
+2025-10-29 13:55:21 - === DASHBOARD ACCESSED ===
+2025-10-29 13:55:21 - Loading required files
+2025-10-29 13:55:21 - Required files loaded successfully
+2025-10-29 13:55:21 - MpesaService loaded successfully
+2025-10-29 13:55:21 - User ID: 1
+2025-10-29 13:55:21 - User orders: 0, Events: 0
+2025-10-29 13:55:21 - Rendering dashboard page
+2025-10-29 13:57:14 - === DASHBOARD ACCESSED ===
+2025-10-29 13:57:14 - Loading required files
+2025-10-29 13:57:14 - Required files loaded successfully
+2025-10-29 13:57:14 - MpesaService loaded successfully
+2025-10-29 13:57:14 - User ID: 1
+2025-10-29 13:57:14 - User orders: 0, Events: 1
+2025-10-29 13:57:14 - Rendering dashboard page
+2025-10-29 13:57:25 - === DASHBOARD ACCESSED ===
+2025-10-29 13:57:25 - Loading required files
+2025-10-29 13:57:25 - Required files loaded successfully
+2025-10-29 13:57:25 - MpesaService loaded successfully
+2025-10-29 13:57:25 - User ID: 1
+2025-10-29 13:57:25 - User orders: 0, Events: 1
+2025-10-29 13:57:25 - POST request received: Array
+(
+    [create_order] => 1
+    [event_id] => 1
+    [quantity] => 1
+)
+
+2025-10-29 13:57:25 - Creating order...
+2025-10-29 13:57:25 - Order created successfully: #1
+2025-10-29 13:57:25 - === DASHBOARD ACCESSED ===
+2025-10-29 13:57:25 - Loading required files
+2025-10-29 13:57:25 - Required files loaded successfully
+2025-10-29 13:57:25 - MpesaService loaded successfully
+2025-10-29 13:57:25 - User ID: 1
+2025-10-29 13:57:25 - User orders: 1, Events: 1
+2025-10-29 13:57:25 - Rendering dashboard page
+2025-10-29 13:57:45 - === DASHBOARD ACCESSED ===
+2025-10-29 13:57:45 - Loading required files
+2025-10-29 13:57:45 - Required files loaded successfully
+2025-10-29 13:57:45 - MpesaService loaded successfully
+2025-10-29 13:57:45 - User ID: 1
+2025-10-29 13:57:45 - User orders: 1, Events: 1
+2025-10-29 13:57:45 - POST request received: Array
+(
+    [process_payment] => 1
+    [order_id] => 1
+    [phone] => 0701024122
+)
+
+2025-10-29 13:57:45 - Processing M-Pesa payment...
+2025-10-29 13:57:45 - Original amount: 2000.00, M-Pesa amount: 2000
+2025-10-29 13:57:45 - MpesaService initialized
+2025-10-29 13:57:45 - Using ngrok Callback URL: https://tom-primatial-noncontrollablely.ngrok-free.dev/mpesa/mpesa_callback.php
+2025-10-29 13:57:45 - Phone validated: 254701024122
+2025-10-29 13:57:45 - Initiating STK Push with amount: 2000
+2025-10-29 13:57:46 - STK Response: Array
+(
+    [MerchantRequestID] => df2a-4c28-be64-1e6d4a81c69a6865
+    [CheckoutRequestID] => ws_CO_29102025165745898701024122
+    [ResponseCode] => 0
+    [ResponseDescription] => Success. Request accepted for processing
+    [CustomerMessage] => Success. Request accepted for processing
+)
+
+2025-10-29 13:57:46 - Transaction record created
+2025-10-29 13:57:46 - Order updated with checkout request ID
+2025-10-29 13:57:46 - Payment initiated successfully
+2025-10-29 13:57:46 - === DASHBOARD ACCESSED ===
+2025-10-29 13:57:46 - Loading required files
+2025-10-29 13:57:47 - Required files loaded successfully
+2025-10-29 13:57:47 - MpesaService loaded successfully
+2025-10-29 13:57:47 - User ID: 1
+2025-10-29 13:57:47 - User orders: 1, Events: 1
+2025-10-29 13:57:47 - Rendering dashboard page
+2025-10-29 13:57:52 - === DASHBOARD ACCESSED ===
+2025-10-29 13:57:52 - Loading required files
+2025-10-29 13:57:52 - Required files loaded successfully
+2025-10-29 13:57:52 - MpesaService loaded successfully
+2025-10-29 13:57:52 - User ID: 1
+2025-10-29 13:57:52 - User orders: 1, Events: 1
+2025-10-29 13:57:52 - Rendering dashboard page
+2025-10-29 13:57:57 - === DASHBOARD ACCESSED ===
+2025-10-29 13:57:57 - Loading required files
+2025-10-29 13:57:57 - Required files loaded successfully
+2025-10-29 13:57:57 - MpesaService loaded successfully
+2025-10-29 13:57:57 - User ID: 1
+2025-10-29 13:57:57 - User orders: 1, Events: 1
+2025-10-29 13:57:57 - Rendering dashboard page
+2025-10-29 13:57:59 - === DASHBOARD ACCESSED ===
+2025-10-29 13:57:59 - Loading required files
+2025-10-29 13:57:59 - Required files loaded successfully
+2025-10-29 13:57:59 - MpesaService loaded successfully
+2025-10-29 13:57:59 - User ID: 1
+2025-10-29 13:57:59 - User orders: 1, Events: 1
+2025-10-29 13:57:59 - Rendering dashboard page
+2025-10-29 13:58:04 - === DASHBOARD ACCESSED ===
+2025-10-29 13:58:04 - Loading required files
+2025-10-29 13:58:04 - Required files loaded successfully
+2025-10-29 13:58:04 - MpesaService loaded successfully
+2025-10-29 13:58:04 - User ID: 1
+2025-10-29 13:58:04 - User orders: 1, Events: 1
+2025-10-29 13:58:04 - Rendering dashboard page
+2025-10-29 14:01:15 - === DASHBOARD ACCESSED ===
+2025-10-29 14:01:15 - Loading required files
+2025-10-29 14:01:15 - Required files loaded successfully
+2025-10-29 14:01:15 - MpesaService loaded successfully
+2025-10-29 14:01:16 - User ID: 1
+2025-10-29 14:01:16 - User orders: 1, Events: 1
+2025-10-29 14:01:16 - Rendering dashboard page
+2025-10-29 14:01:21 - === DASHBOARD ACCESSED ===
+2025-10-29 14:01:21 - Loading required files
+2025-10-29 14:01:21 - Required files loaded successfully
+2025-10-29 14:01:21 - MpesaService loaded successfully
+2025-10-29 14:01:21 - User ID: 1
+2025-10-29 14:01:21 - User orders: 1, Events: 1
+2025-10-29 14:01:21 - Rendering dashboard page
+2025-10-29 14:01:26 - === DASHBOARD ACCESSED ===
+2025-10-29 14:01:26 - Loading required files
+2025-10-29 14:01:26 - Required files loaded successfully
+2025-10-29 14:01:26 - MpesaService loaded successfully
+2025-10-29 14:01:26 - User ID: 1
+2025-10-29 14:01:26 - User orders: 1, Events: 1
+2025-10-29 14:01:26 - Rendering dashboard page
+2025-10-29 14:01:31 - === DASHBOARD ACCESSED ===
+2025-10-29 14:01:31 - Loading required files
+2025-10-29 14:01:31 - Required files loaded successfully
+2025-10-29 14:01:31 - MpesaService loaded successfully
+2025-10-29 14:01:31 - User ID: 1
+2025-10-29 14:01:31 - User orders: 1, Events: 1
+2025-10-29 14:01:31 - Rendering dashboard page
+2025-10-29 14:01:36 - === DASHBOARD ACCESSED ===
+2025-10-29 14:01:36 - Loading required files
+2025-10-29 14:01:36 - Required files loaded successfully
+2025-10-29 14:01:36 - MpesaService loaded successfully
+2025-10-29 14:01:36 - User ID: 1
+2025-10-29 14:01:36 - User orders: 1, Events: 1
+2025-10-29 14:01:36 - Rendering dashboard page
+2025-10-29 14:01:41 - === DASHBOARD ACCESSED ===
+2025-10-29 14:01:41 - Loading required files
+2025-10-29 14:01:41 - Required files loaded successfully
+2025-10-29 14:01:41 - MpesaService loaded successfully
+2025-10-29 14:01:41 - User ID: 1
+2025-10-29 14:01:41 - User orders: 1, Events: 1
+2025-10-29 14:01:41 - Rendering dashboard page
+2025-10-29 14:01:46 - === DASHBOARD ACCESSED ===
+2025-10-29 14:01:46 - Loading required files
+2025-10-29 14:01:46 - Required files loaded successfully
+2025-10-29 14:01:46 - MpesaService loaded successfully
+2025-10-29 14:01:46 - User ID: 1
+2025-10-29 14:01:46 - User orders: 1, Events: 1
+2025-10-29 14:01:46 - Rendering dashboard page
+2025-10-29 14:01:51 - === DASHBOARD ACCESSED ===
+2025-10-29 14:01:51 - Loading required files
+2025-10-29 14:01:51 - Required files loaded successfully
+2025-10-29 14:01:51 - MpesaService loaded successfully
+2025-10-29 14:01:51 - User ID: 1
+2025-10-29 14:01:51 - User orders: 1, Events: 1
+2025-10-29 14:01:51 - Rendering dashboard page
+2025-10-29 14:01:56 - === DASHBOARD ACCESSED ===
+2025-10-29 14:01:56 - Loading required files
+2025-10-29 14:01:56 - Required files loaded successfully
+2025-10-29 14:01:56 - MpesaService loaded successfully
+2025-10-29 14:01:56 - User ID: 1
+2025-10-29 14:01:56 - User orders: 1, Events: 1
+2025-10-29 14:01:56 - Rendering dashboard page
+2025-10-29 14:02:01 - === DASHBOARD ACCESSED ===
+2025-10-29 14:02:01 - Loading required files
+2025-10-29 14:02:01 - Required files loaded successfully
+2025-10-29 14:02:01 - MpesaService loaded successfully
+2025-10-29 14:02:01 - User ID: 1
+2025-10-29 14:02:01 - User orders: 1, Events: 1
+2025-10-29 14:02:01 - Rendering dashboard page
+2025-10-29 14:02:06 - === DASHBOARD ACCESSED ===
+2025-10-29 14:02:06 - Loading required files
+2025-10-29 14:02:06 - Required files loaded successfully
+2025-10-29 14:02:06 - MpesaService loaded successfully
+2025-10-29 14:02:06 - User ID: 1
+2025-10-29 14:02:06 - User orders: 1, Events: 1
+2025-10-29 14:02:06 - Rendering dashboard page
+2025-10-29 14:02:11 - === DASHBOARD ACCESSED ===
+2025-10-29 14:02:11 - Loading required files
+2025-10-29 14:02:11 - Required files loaded successfully
+2025-10-29 14:02:11 - MpesaService loaded successfully
+2025-10-29 14:02:11 - User ID: 1
+2025-10-29 14:02:11 - User orders: 1, Events: 1
+2025-10-29 14:02:11 - Rendering dashboard page
+2025-10-29 14:02:17 - === DASHBOARD ACCESSED ===
+2025-10-29 14:02:17 - Loading required files
+2025-10-29 14:02:17 - Required files loaded successfully
+2025-10-29 14:02:17 - MpesaService loaded successfully
+2025-10-29 14:02:17 - User ID: 1
+2025-10-29 14:02:17 - User orders: 1, Events: 1
+2025-10-29 14:02:17 - Rendering dashboard page
+2025-10-29 14:02:22 - === DASHBOARD ACCESSED ===
+2025-10-29 14:02:22 - Loading required files
+2025-10-29 14:02:22 - Required files loaded successfully
+2025-10-29 14:02:22 - MpesaService loaded successfully
+2025-10-29 14:02:22 - User ID: 1
+2025-10-29 14:02:22 - User orders: 1, Events: 1
+2025-10-29 14:02:22 - Rendering dashboard page
+2025-10-29 14:02:27 - === DASHBOARD ACCESSED ===
+2025-10-29 14:02:27 - Loading required files
+2025-10-29 14:02:27 - Required files loaded successfully
+2025-10-29 14:02:27 - MpesaService loaded successfully
+2025-10-29 14:02:27 - User ID: 1
+2025-10-29 14:02:27 - User orders: 1, Events: 1
+2025-10-29 14:02:27 - Rendering dashboard page
+2025-10-29 14:02:32 - === DASHBOARD ACCESSED ===
+2025-10-29 14:02:32 - Loading required files
+2025-10-29 14:02:32 - Required files loaded successfully
+2025-10-29 14:02:32 - MpesaService loaded successfully
+2025-10-29 14:02:32 - User ID: 1
+2025-10-29 14:02:32 - User orders: 1, Events: 1
+2025-10-29 14:02:32 - Rendering dashboard page
+2025-10-29 14:02:37 - === DASHBOARD ACCESSED ===
+2025-10-29 14:02:37 - Loading required files
+2025-10-29 14:02:37 - Required files loaded successfully
+2025-10-29 14:02:37 - MpesaService loaded successfully
+2025-10-29 14:02:37 - User ID: 1
+2025-10-29 14:02:37 - User orders: 1, Events: 1
+2025-10-29 14:02:37 - Rendering dashboard page
+2025-10-29 14:02:42 - === DASHBOARD ACCESSED ===
+2025-10-29 14:02:42 - Loading required files
+2025-10-29 14:02:42 - Required files loaded successfully
+2025-10-29 14:02:42 - MpesaService loaded successfully
+2025-10-29 14:02:42 - User ID: 1
+2025-10-29 14:02:42 - User orders: 1, Events: 1
+2025-10-29 14:02:42 - Rendering dashboard page
+2025-10-29 14:02:47 - === DASHBOARD ACCESSED ===
+2025-10-29 14:02:47 - Loading required files
+2025-10-29 14:02:47 - Required files loaded successfully
+2025-10-29 14:02:47 - MpesaService loaded successfully
+2025-10-29 14:02:47 - User ID: 1
+2025-10-29 14:02:47 - User orders: 1, Events: 1
+2025-10-29 14:02:47 - Rendering dashboard page
+2025-10-29 14:02:52 - === DASHBOARD ACCESSED ===
+2025-10-29 14:02:52 - Loading required files
+2025-10-29 14:02:52 - Required files loaded successfully
+2025-10-29 14:02:52 - MpesaService loaded successfully
+2025-10-29 14:02:52 - User ID: 1
+2025-10-29 14:02:52 - User orders: 1, Events: 1
+2025-10-29 14:02:52 - Rendering dashboard page
+2025-10-29 14:02:57 - === DASHBOARD ACCESSED ===
+2025-10-29 14:02:57 - Loading required files
+2025-10-29 14:02:57 - Required files loaded successfully
+2025-10-29 14:02:57 - MpesaService loaded successfully
+2025-10-29 14:02:57 - User ID: 1
+2025-10-29 14:02:57 - User orders: 1, Events: 1
+2025-10-29 14:02:57 - Rendering dashboard page
+2025-10-29 14:03:02 - === DASHBOARD ACCESSED ===
+2025-10-29 14:03:02 - Loading required files
+2025-10-29 14:03:02 - Required files loaded successfully
+2025-10-29 14:03:02 - MpesaService loaded successfully
+2025-10-29 14:03:02 - User ID: 1
+2025-10-29 14:03:02 - User orders: 1, Events: 1
+2025-10-29 14:03:02 - Rendering dashboard page
+2025-10-29 14:03:07 - === DASHBOARD ACCESSED ===
+2025-10-29 14:03:07 - Loading required files
+2025-10-29 14:03:07 - Required files loaded successfully
+2025-10-29 14:03:07 - MpesaService loaded successfully
+2025-10-29 14:03:07 - User ID: 1
+2025-10-29 14:03:07 - User orders: 1, Events: 1
+2025-10-29 14:03:07 - Rendering dashboard page
+2025-10-29 14:03:13 - === DASHBOARD ACCESSED ===
+2025-10-29 14:03:13 - Loading required files
+2025-10-29 14:03:13 - Required files loaded successfully
+2025-10-29 14:03:13 - MpesaService loaded successfully
+2025-10-29 14:03:13 - User ID: 1
+2025-10-29 14:03:13 - User orders: 1, Events: 1
+2025-10-29 14:03:13 - Rendering dashboard page
+2025-10-29 14:03:18 - === DASHBOARD ACCESSED ===
+2025-10-29 14:03:18 - Loading required files
+2025-10-29 14:03:18 - Required files loaded successfully
+2025-10-29 14:03:18 - MpesaService loaded successfully
+2025-10-29 14:03:18 - User ID: 1
+2025-10-29 14:03:18 - User orders: 1, Events: 1
+2025-10-29 14:03:18 - Rendering dashboard page
+2025-10-29 14:03:26 - === DASHBOARD ACCESSED ===
+2025-10-29 14:03:26 - Loading required files
+2025-10-29 14:03:26 - Required files loaded successfully
+2025-10-29 14:03:26 - MpesaService loaded successfully
+2025-10-29 14:03:26 - User ID: 1
+2025-10-29 14:03:26 - User orders: 1, Events: 1
+2025-10-29 14:03:26 - Rendering dashboard page
+2025-10-29 14:03:31 - === DASHBOARD ACCESSED ===
+2025-10-29 14:03:31 - Loading required files
+2025-10-29 14:03:31 - Required files loaded successfully
+2025-10-29 14:03:31 - MpesaService loaded successfully
+2025-10-29 14:03:31 - User ID: 1
+2025-10-29 14:03:31 - User orders: 1, Events: 1
+2025-10-29 14:03:31 - Rendering dashboard page
+2025-10-29 14:03:36 - === DASHBOARD ACCESSED ===
+2025-10-29 14:03:36 - Loading required files
+2025-10-29 14:03:36 - Required files loaded successfully
+2025-10-29 14:03:36 - MpesaService loaded successfully
+2025-10-29 14:03:36 - User ID: 1
+2025-10-29 14:03:36 - User orders: 1, Events: 1
+2025-10-29 14:03:36 - Rendering dashboard page
+2025-10-29 14:03:41 - === DASHBOARD ACCESSED ===
+2025-10-29 14:03:41 - Loading required files
+2025-10-29 14:03:41 - Required files loaded successfully
+2025-10-29 14:03:41 - MpesaService loaded successfully
+2025-10-29 14:03:41 - User ID: 1
+2025-10-29 14:03:41 - User orders: 1, Events: 1
+2025-10-29 14:03:41 - Rendering dashboard page
+2025-10-29 14:03:46 - === DASHBOARD ACCESSED ===
+2025-10-29 14:03:46 - Loading required files
+2025-10-29 14:03:46 - Required files loaded successfully
+2025-10-29 14:03:46 - MpesaService loaded successfully
+2025-10-29 14:03:46 - User ID: 1
+2025-10-29 14:03:46 - User orders: 1, Events: 1
+2025-10-29 14:03:46 - Rendering dashboard page
+2025-10-29 14:03:51 - === DASHBOARD ACCESSED ===
+2025-10-29 14:03:51 - Loading required files
+2025-10-29 14:03:51 - Required files loaded successfully
+2025-10-29 14:03:51 - MpesaService loaded successfully
+2025-10-29 14:03:51 - User ID: 1
+2025-10-29 14:03:51 - User orders: 1, Events: 1
+2025-10-29 14:03:51 - Rendering dashboard page
+2025-10-29 14:03:56 - === DASHBOARD ACCESSED ===
+2025-10-29 14:03:56 - Loading required files
+2025-10-29 14:03:56 - Required files loaded successfully
+2025-10-29 14:03:56 - MpesaService loaded successfully
+2025-10-29 14:03:56 - User ID: 1
+2025-10-29 14:03:56 - User orders: 1, Events: 1
+2025-10-29 14:03:56 - Rendering dashboard page
+2025-10-29 14:04:01 - === DASHBOARD ACCESSED ===
+2025-10-29 14:04:01 - Loading required files
+2025-10-29 14:04:01 - Required files loaded successfully
+2025-10-29 14:04:01 - MpesaService loaded successfully
+2025-10-29 14:04:01 - User ID: 1
+2025-10-29 14:04:01 - User orders: 1, Events: 1
+2025-10-29 14:04:01 - Rendering dashboard page
+2025-10-29 14:04:06 - === DASHBOARD ACCESSED ===
+2025-10-29 14:04:06 - Loading required files
+2025-10-29 14:04:06 - Required files loaded successfully
+2025-10-29 14:04:06 - MpesaService loaded successfully
+2025-10-29 14:04:06 - User ID: 1
+2025-10-29 14:04:06 - User orders: 1, Events: 1
+2025-10-29 14:04:06 - Rendering dashboard page
+2025-10-29 14:04:11 - === DASHBOARD ACCESSED ===
+2025-10-29 14:04:11 - Loading required files
+2025-10-29 14:04:11 - Required files loaded successfully
+2025-10-29 14:04:11 - MpesaService loaded successfully
+2025-10-29 14:04:11 - User ID: 1
+2025-10-29 14:04:11 - User orders: 1, Events: 1
+2025-10-29 14:04:11 - Rendering dashboard page
+2025-10-29 14:04:16 - === DASHBOARD ACCESSED ===
+2025-10-29 14:04:16 - Loading required files
+2025-10-29 14:04:17 - Required files loaded successfully
+2025-10-29 14:04:17 - MpesaService loaded successfully
+2025-10-29 14:04:17 - User ID: 1
+2025-10-29 14:04:17 - User orders: 1, Events: 1
+2025-10-29 14:04:17 - Rendering dashboard page
+2025-10-29 14:04:22 - === DASHBOARD ACCESSED ===
+2025-10-29 14:04:22 - Loading required files
+2025-10-29 14:04:22 - Required files loaded successfully
+2025-10-29 14:04:22 - MpesaService loaded successfully
+2025-10-29 14:04:22 - User ID: 1
+2025-10-29 14:04:22 - User orders: 1, Events: 1
+2025-10-29 14:04:22 - Rendering dashboard page
+2025-10-29 14:04:27 - === DASHBOARD ACCESSED ===
+2025-10-29 14:04:27 - Loading required files
+2025-10-29 14:04:27 - Required files loaded successfully
+2025-10-29 14:04:27 - MpesaService loaded successfully
+2025-10-29 14:04:27 - User ID: 1
+2025-10-29 14:04:27 - User orders: 1, Events: 1
+2025-10-29 14:04:27 - Rendering dashboard page
+2025-10-29 14:04:32 - === DASHBOARD ACCESSED ===
+2025-10-29 14:04:32 - Loading required files
+2025-10-29 14:04:32 - Required files loaded successfully
+2025-10-29 14:04:32 - MpesaService loaded successfully
+2025-10-29 14:04:32 - User ID: 1
+2025-10-29 14:04:32 - User orders: 1, Events: 1
+2025-10-29 14:04:32 - Rendering dashboard page
+2025-10-29 14:04:33 - === DASHBOARD ACCESSED ===
+2025-10-29 14:04:33 - Loading required files
+2025-10-29 14:04:33 - Required files loaded successfully
+2025-10-29 14:04:33 - MpesaService loaded successfully
+2025-10-29 14:04:33 - User ID: 1
+2025-10-29 14:04:33 - User orders: 1, Events: 1
+2025-10-29 14:04:33 - Rendering dashboard page
+2025-10-29 14:04:35 - === DASHBOARD ACCESSED ===
+2025-10-29 14:04:35 - Loading required files
+2025-10-29 14:04:35 - Required files loaded successfully
+2025-10-29 14:04:35 - MpesaService loaded successfully
+2025-10-29 14:04:35 - User ID: 1
+2025-10-29 14:04:35 - User orders: 1, Events: 1
+2025-10-29 14:04:35 - Rendering dashboard page
+2025-10-29 14:04:40 - === DASHBOARD ACCESSED ===
+2025-10-29 14:04:40 - Loading required files
+2025-10-29 14:04:40 - Required files loaded successfully
+2025-10-29 14:04:40 - MpesaService loaded successfully
+2025-10-29 14:04:40 - User ID: 1
+2025-10-29 14:04:40 - User orders: 1, Events: 1
+2025-10-29 14:04:40 - Rendering dashboard page
+2025-10-29 14:04:45 - === DASHBOARD ACCESSED ===
+2025-10-29 14:04:45 - Loading required files
+2025-10-29 14:04:45 - Required files loaded successfully
+2025-10-29 14:04:45 - MpesaService loaded successfully
+2025-10-29 14:04:45 - User ID: 1
+2025-10-29 14:04:45 - User orders: 1, Events: 1
+2025-10-29 14:04:45 - Rendering dashboard page
+2025-10-29 14:04:50 - === DASHBOARD ACCESSED ===
+2025-10-29 14:04:50 - Loading required files
+2025-10-29 14:04:50 - Required files loaded successfully
+2025-10-29 14:04:50 - MpesaService loaded successfully
+2025-10-29 14:04:50 - User ID: 1
+2025-10-29 14:04:50 - User orders: 1, Events: 1
+2025-10-29 14:04:50 - Rendering dashboard page
+2025-10-29 14:04:55 - === DASHBOARD ACCESSED ===
+2025-10-29 14:04:55 - Loading required files
+2025-10-29 14:04:55 - Required files loaded successfully
+2025-10-29 14:04:55 - MpesaService loaded successfully
+2025-10-29 14:04:55 - User ID: 1
+2025-10-29 14:04:55 - User orders: 1, Events: 1
+2025-10-29 14:04:55 - Rendering dashboard page
+2025-10-29 14:05:00 - === DASHBOARD ACCESSED ===
+2025-10-29 14:05:00 - Loading required files
+2025-10-29 14:05:00 - Required files loaded successfully
+2025-10-29 14:05:01 - MpesaService loaded successfully
+2025-10-29 14:05:01 - User ID: 1
+2025-10-29 14:05:01 - User orders: 1, Events: 1
+2025-10-29 14:05:01 - Rendering dashboard page
+2025-10-29 14:05:06 - === DASHBOARD ACCESSED ===
+2025-10-29 14:05:06 - Loading required files
+2025-10-29 14:05:06 - Required files loaded successfully
+2025-10-29 14:05:06 - MpesaService loaded successfully
+2025-10-29 14:05:06 - User ID: 1
+2025-10-29 14:05:06 - User orders: 1, Events: 1
+2025-10-29 14:05:06 - Rendering dashboard page
+2025-10-29 14:05:11 - === DASHBOARD ACCESSED ===
+2025-10-29 14:05:11 - Loading required files
+2025-10-29 14:05:11 - Required files loaded successfully
+2025-10-29 14:05:11 - MpesaService loaded successfully
+2025-10-29 14:05:11 - User ID: 1
+2025-10-29 14:05:11 - User orders: 1, Events: 1
+2025-10-29 14:05:11 - Rendering dashboard page
+2025-10-29 14:05:16 - === DASHBOARD ACCESSED ===
+2025-10-29 14:05:16 - Loading required files
+2025-10-29 14:05:16 - Required files loaded successfully
+2025-10-29 14:05:16 - MpesaService loaded successfully
+2025-10-29 14:05:16 - User ID: 1
+2025-10-29 14:05:16 - User orders: 1, Events: 1
+2025-10-29 14:05:16 - Rendering dashboard page
+2025-10-29 14:05:21 - === DASHBOARD ACCESSED ===
+2025-10-29 14:05:21 - Loading required files
+2025-10-29 14:05:21 - Required files loaded successfully
+2025-10-29 14:05:21 - MpesaService loaded successfully
+2025-10-29 14:05:21 - User ID: 1
+2025-10-29 14:05:21 - User orders: 1, Events: 1
+2025-10-29 14:05:21 - Rendering dashboard page
+2025-10-29 14:05:26 - === DASHBOARD ACCESSED ===
+2025-10-29 14:05:26 - Loading required files
+2025-10-29 14:05:26 - Required files loaded successfully
+2025-10-29 14:05:26 - MpesaService loaded successfully
+2025-10-29 14:05:26 - User ID: 1
+2025-10-29 14:05:26 - User orders: 1, Events: 1
+2025-10-29 14:05:26 - Rendering dashboard page
+2025-10-29 14:05:31 - === DASHBOARD ACCESSED ===
+2025-10-29 14:05:31 - Loading required files
+2025-10-29 14:05:31 - Required files loaded successfully
+2025-10-29 14:05:31 - MpesaService loaded successfully
+2025-10-29 14:05:31 - User ID: 1
+2025-10-29 14:05:31 - User orders: 1, Events: 1
+2025-10-29 14:05:31 - Rendering dashboard page
+2025-10-29 14:05:36 - === DASHBOARD ACCESSED ===
+2025-10-29 14:05:36 - Loading required files
+2025-10-29 14:05:36 - Required files loaded successfully
+2025-10-29 14:05:36 - MpesaService loaded successfully
+2025-10-29 14:05:36 - User ID: 1
+2025-10-29 14:05:36 - User orders: 1, Events: 1
+2025-10-29 14:05:36 - Rendering dashboard page
+2025-10-29 14:59:32 - === DASHBOARD ACCESSED ===
+2025-10-29 14:59:32 - Loading required files
+2025-10-29 14:59:32 - Required files loaded successfully
+2025-10-29 14:59:32 - MpesaService loaded successfully
+2025-10-29 14:59:32 - User ID: 1
+2025-10-29 14:59:32 - User orders: 1, Events: 1
+2025-10-29 14:59:32 - Rendering dashboard page
+2025-10-29 16:06:09 - === DASHBOARD ACCESSED ===
+2025-10-29 16:06:09 - Loading required files
+2025-10-29 16:06:09 - Required files loaded successfully
+2025-10-29 16:06:09 - MpesaService loaded successfully
+2025-10-29 16:06:09 - User ID: 1
+2025-10-29 16:06:09 - User orders: 1, Events: 1
+2025-10-29 16:06:09 - Rendering dashboard page
+2025-10-29 16:06:16 - === DASHBOARD ACCESSED ===
+2025-10-29 16:06:16 - Loading required files
+2025-10-29 16:06:16 - Required files loaded successfully
+2025-10-29 16:06:16 - MpesaService loaded successfully
+2025-10-29 16:06:16 - User ID: 1
+2025-10-29 16:06:16 - User orders: 1, Events: 1
+2025-10-29 16:06:16 - Rendering dashboard page
+2025-10-29 16:06:25 - === DASHBOARD ACCESSED ===
+2025-10-29 16:06:25 - Loading required files
+2025-10-29 16:06:25 - Required files loaded successfully
+2025-10-29 16:06:25 - MpesaService loaded successfully
+2025-10-29 16:06:25 - User ID: 1
+2025-10-29 16:06:25 - User orders: 1, Events: 1
+2025-10-29 16:06:25 - Rendering dashboard page
+2025-10-29 16:06:30 - === DASHBOARD ACCESSED ===
+2025-10-29 16:06:30 - Loading required files
+2025-10-29 16:06:30 - Required files loaded successfully
+2025-10-29 16:06:30 - MpesaService loaded successfully
+2025-10-29 16:06:30 - User ID: 1
+2025-10-29 16:06:30 - User orders: 1, Events: 1
+2025-10-29 16:06:30 - Rendering dashboard page
+2025-10-29 16:06:36 - === DASHBOARD ACCESSED ===
+2025-10-29 16:06:36 - Loading required files
+2025-10-29 16:06:36 - Required files loaded successfully
+2025-10-29 16:06:36 - MpesaService loaded successfully
+2025-10-29 16:06:36 - User ID: 1
+2025-10-29 16:06:36 - User orders: 1, Events: 1
+2025-10-29 16:06:36 - Rendering dashboard page
+2025-10-29 16:06:42 - === DASHBOARD ACCESSED ===
+2025-10-29 16:06:42 - Loading required files
+2025-10-29 16:06:42 - Required files loaded successfully
+2025-10-29 16:06:42 - MpesaService loaded successfully
+2025-10-29 16:06:42 - User ID: 1
+2025-10-29 16:06:42 - User orders: 1, Events: 1
+2025-10-29 16:06:42 - Rendering dashboard page
+2025-10-29 16:06:47 - === DASHBOARD ACCESSED ===
+2025-10-29 16:06:47 - Loading required files
+2025-10-29 16:06:47 - Required files loaded successfully
+2025-10-29 16:06:47 - MpesaService loaded successfully
+2025-10-29 16:06:47 - User ID: 1
+2025-10-29 16:06:47 - User orders: 1, Events: 1
+2025-10-29 16:06:48 - Rendering dashboard page
+2025-10-29 16:06:53 - === DASHBOARD ACCESSED ===
+2025-10-29 16:06:53 - Loading required files
+2025-10-29 16:06:53 - Required files loaded successfully
+2025-10-29 16:06:53 - MpesaService loaded successfully
+2025-10-29 16:06:53 - User ID: 1
+2025-10-29 16:06:53 - User orders: 1, Events: 1
+2025-10-29 16:06:53 - Rendering dashboard page
+2025-10-29 16:06:58 - === DASHBOARD ACCESSED ===
+2025-10-29 16:06:58 - Loading required files
+2025-10-29 16:06:58 - Required files loaded successfully
+2025-10-29 16:06:58 - MpesaService loaded successfully
+2025-10-29 16:06:58 - User ID: 1
+2025-10-29 16:06:58 - User orders: 1, Events: 1
+2025-10-29 16:06:58 - Rendering dashboard page
+2025-10-29 16:07:03 - === DASHBOARD ACCESSED ===
+2025-10-29 16:07:03 - Loading required files
+2025-10-29 16:07:03 - Required files loaded successfully
+2025-10-29 16:07:03 - MpesaService loaded successfully
+2025-10-29 16:07:03 - User ID: 1
+2025-10-29 16:07:03 - User orders: 1, Events: 1
+2025-10-29 16:07:03 - Rendering dashboard page
+2025-10-29 16:07:08 - === DASHBOARD ACCESSED ===
+2025-10-29 16:07:08 - Loading required files
+2025-10-29 16:07:08 - Required files loaded successfully
+2025-10-29 16:07:08 - MpesaService loaded successfully
+2025-10-29 16:07:08 - User ID: 1
+2025-10-29 16:07:08 - User orders: 1, Events: 1
+2025-10-29 16:07:08 - Rendering dashboard page
+2025-10-29 16:07:13 - === DASHBOARD ACCESSED ===
+2025-10-29 16:07:13 - Loading required files
+2025-10-29 16:07:13 - Required files loaded successfully
+2025-10-29 16:07:13 - MpesaService loaded successfully
+2025-10-29 16:07:13 - User ID: 1
+2025-10-29 16:07:13 - User orders: 1, Events: 1
+2025-10-29 16:07:13 - Rendering dashboard page
+2025-10-29 16:07:18 - === DASHBOARD ACCESSED ===
+2025-10-29 16:07:18 - Loading required files
+2025-10-29 16:07:18 - Required files loaded successfully
+2025-10-29 16:07:18 - MpesaService loaded successfully
+2025-10-29 16:07:18 - User ID: 1
+2025-10-29 16:07:18 - User orders: 1, Events: 1
+2025-10-29 16:07:18 - Rendering dashboard page
+2025-10-29 16:07:24 - === DASHBOARD ACCESSED ===
+2025-10-29 16:07:24 - Loading required files
+2025-10-29 16:07:24 - Required files loaded successfully
+2025-10-29 16:07:24 - MpesaService loaded successfully
+2025-10-29 16:07:24 - User ID: 1
+2025-10-29 16:07:24 - User orders: 1, Events: 1
+2025-10-29 16:07:24 - Rendering dashboard page
+2025-10-29 16:07:30 - === DASHBOARD ACCESSED ===
+2025-10-29 16:07:30 - Loading required files
+2025-10-29 16:07:30 - Required files loaded successfully
+2025-10-29 16:07:30 - MpesaService loaded successfully
+2025-10-29 16:07:30 - User ID: 1
+2025-10-29 16:07:30 - User orders: 1, Events: 1
+2025-10-29 16:07:30 - Rendering dashboard page
+2025-10-29 16:07:36 - === DASHBOARD ACCESSED ===
+2025-10-29 16:07:36 - Loading required files
+2025-10-29 16:07:36 - Required files loaded successfully
+2025-10-29 16:07:36 - MpesaService loaded successfully
+2025-10-29 16:07:36 - User ID: 1
+2025-10-29 16:07:36 - User orders: 1, Events: 1
+2025-10-29 16:07:36 - Rendering dashboard page
+2025-10-29 16:07:42 - === DASHBOARD ACCESSED ===
+2025-10-29 16:07:42 - Loading required files
+2025-10-29 16:07:42 - Required files loaded successfully
+2025-10-29 16:07:42 - MpesaService loaded successfully
+2025-10-29 16:07:42 - User ID: 1
+2025-10-29 16:07:42 - User orders: 1, Events: 1
+2025-10-29 16:07:42 - Rendering dashboard page
+2025-10-29 16:07:48 - === DASHBOARD ACCESSED ===
+2025-10-29 16:07:48 - Loading required files
+2025-10-29 16:07:48 - Required files loaded successfully
+2025-10-29 16:07:48 - MpesaService loaded successfully
+2025-10-29 16:07:48 - User ID: 1
+2025-10-29 16:07:48 - User orders: 1, Events: 1
+2025-10-29 16:07:48 - Rendering dashboard page
+2025-10-29 16:07:54 - === DASHBOARD ACCESSED ===
+2025-10-29 16:07:54 - Loading required files
+2025-10-29 16:07:54 - Required files loaded successfully
+2025-10-29 16:07:54 - MpesaService loaded successfully
+2025-10-29 16:07:54 - User ID: 1
+2025-10-29 16:07:54 - User orders: 1, Events: 1
+2025-10-29 16:07:54 - Rendering dashboard page
+2025-10-29 16:08:00 - === DASHBOARD ACCESSED ===
+2025-10-29 16:08:00 - Loading required files
+2025-10-29 16:08:00 - Required files loaded successfully
+2025-10-29 16:08:00 - MpesaService loaded successfully
+2025-10-29 16:08:00 - User ID: 1
+2025-10-29 16:08:00 - User orders: 1, Events: 1
+2025-10-29 16:08:00 - Rendering dashboard page
+2025-10-29 16:08:06 - === DASHBOARD ACCESSED ===
+2025-10-29 16:08:06 - Loading required files
+2025-10-29 16:08:06 - Required files loaded successfully
+2025-10-29 16:08:06 - MpesaService loaded successfully
+2025-10-29 16:08:06 - User ID: 1
+2025-10-29 16:08:06 - User orders: 1, Events: 1
+2025-10-29 16:08:06 - Rendering dashboard page
+2025-10-29 16:08:12 - === DASHBOARD ACCESSED ===
+2025-10-29 16:08:12 - Loading required files
+2025-10-29 16:08:12 - Required files loaded successfully
+2025-10-29 16:08:12 - MpesaService loaded successfully
+2025-10-29 16:08:12 - User ID: 1
+2025-10-29 16:08:12 - User orders: 1, Events: 1
+2025-10-29 16:08:12 - Rendering dashboard page
+2025-10-29 16:08:18 - === DASHBOARD ACCESSED ===
+2025-10-29 16:08:18 - Loading required files
+2025-10-29 16:08:18 - Required files loaded successfully
+2025-10-29 16:08:18 - MpesaService loaded successfully
+2025-10-29 16:08:18 - User ID: 1
+2025-10-29 16:08:18 - User orders: 1, Events: 1
+2025-10-29 16:08:18 - Rendering dashboard page
+2025-10-29 16:08:24 - === DASHBOARD ACCESSED ===
+2025-10-29 16:08:24 - Loading required files
+2025-10-29 16:08:24 - Required files loaded successfully
+2025-10-29 16:08:24 - MpesaService loaded successfully
+2025-10-29 16:08:24 - User ID: 1
+2025-10-29 16:08:24 - User orders: 1, Events: 1
+2025-10-29 16:08:24 - Rendering dashboard page
+2025-10-31 09:56:54 - === DASHBOARD ACCESSED ===
+2025-10-31 09:56:54 - Loading required files
+2025-10-31 09:56:54 - Required files loaded successfully
+2025-10-31 09:56:54 - MpesaService loaded successfully
+2025-10-31 09:56:54 - User ID: 1
+2025-10-31 09:56:54 - User orders: 1, Events: 1
+2025-10-31 09:56:54 - Rendering dashboard page
+2025-10-31 10:12:09 - === DASHBOARD ACCESSED ===
+2025-10-31 10:12:09 - Loading required files
+2025-10-31 10:12:09 - Required files loaded successfully
+2025-10-31 10:12:09 - MpesaService loaded successfully
+2025-10-31 10:12:09 - User ID: 1
+2025-10-31 10:12:09 - User orders: 1, Events: 1
+2025-10-31 10:12:09 - Rendering dashboard page
+2025-11-03 08:22:22 - === DASHBOARD ACCESSED ===
+2025-11-03 08:22:22 - Loading required files
+2025-11-03 08:22:22 - Required files loaded successfully
+2025-11-03 08:22:23 - MpesaService loaded successfully
+2025-11-03 08:22:23 - User ID: 1
+2025-11-03 08:22:23 - User orders: 1, Events: 1
+2025-11-03 08:22:23 - Rendering dashboard page
+2025-11-04 10:59:34 - === DASHBOARD ACCESSED ===
+2025-11-04 10:59:34 - Loading required files
+2025-11-04 10:59:34 - Required files loaded successfully
+2025-11-04 10:59:34 - MpesaService loaded successfully
+2025-11-04 10:59:34 - User ID: 1
+2025-11-04 10:59:34 - User orders: 1, Events: 1
+2025-11-04 10:59:34 - Rendering dashboard page
+2025-11-11 09:16:20 - === DASHBOARD ACCESSED ===
+2025-11-11 09:16:20 - Loading required files
+2025-11-11 09:16:20 - Required files loaded successfully
+2025-11-11 09:16:20 - MpesaService loaded successfully
+2025-11-11 09:16:20 - User ID: 1
+2025-11-11 09:16:20 - User orders: 1, Events: 1
+2025-11-11 09:16:20 - Rendering dashboard page
+2025-11-11 09:19:40 - === DASHBOARD ACCESSED ===
+2025-11-11 09:19:40 - Loading required files
+2025-11-11 09:19:40 - Required files loaded successfully
+2025-11-11 09:19:40 - MpesaService loaded successfully
+2025-11-11 09:19:40 - User ID: 1
+2025-11-11 09:19:40 - User orders: 1, Events: 1
+2025-11-11 09:19:40 - Rendering dashboard page
+2025-11-11 09:20:28 - === DASHBOARD ACCESSED ===
+2025-11-11 09:20:28 - Loading required files
+2025-11-11 09:20:28 - Required files loaded successfully
+2025-11-11 09:20:28 - MpesaService loaded successfully
+2025-11-11 09:20:28 - User ID: 1
+2025-11-11 09:20:28 - User orders: 1, Events: 1
+2025-11-11 09:20:28 - Rendering dashboard page
+2025-11-11 09:20:40 - === DASHBOARD ACCESSED ===
+2025-11-11 09:20:40 - Loading required files
+2025-11-11 09:20:40 - Required files loaded successfully
+2025-11-11 09:20:40 - MpesaService loaded successfully
+2025-11-11 09:20:40 - User ID: 1
+2025-11-11 09:20:40 - User orders: 1, Events: 1
+2025-11-11 09:20:40 - POST request received: Array
+(
+    [create_order] => 1
+    [event_id] => 1
+    [quantity] => 10
+)
+
+2025-11-11 09:20:40 - Creating order...
+2025-11-11 09:20:40 - Order created successfully: #2
+2025-11-11 09:20:40 - === DASHBOARD ACCESSED ===
+2025-11-11 09:20:40 - Loading required files
+2025-11-11 09:20:40 - Required files loaded successfully
+2025-11-11 09:20:40 - MpesaService loaded successfully
+2025-11-11 09:20:40 - User ID: 1
+2025-11-11 09:20:40 - User orders: 2, Events: 1
+2025-11-11 09:20:40 - Rendering dashboard page
+2025-11-11 09:21:23 - === DASHBOARD ACCESSED ===
+2025-11-11 09:21:23 - Loading required files
+2025-11-11 09:21:23 - Required files loaded successfully
+2025-11-11 09:21:23 - MpesaService loaded successfully
+2025-11-11 09:21:23 - User ID: 1
+2025-11-11 09:21:23 - User orders: 2, Events: 1
+2025-11-11 09:21:23 - POST request received: Array
+(
+    [process_payment] => 1
+    [order_id] => 2
+    [phone] => 0722524741
+)
+
+2025-11-11 09:21:23 - Processing M-Pesa payment...
+2025-11-11 09:21:23 - Original amount: 20000.00, M-Pesa amount: 20000
+2025-11-11 09:21:23 - MpesaService initialized
+2025-11-11 09:21:23 - Using ngrok Callback URL: https://tom-primatial-noncontrollablely.ngrok-free.dev/mpesa/mpesa_callback.php
+2025-11-11 09:21:23 - Phone validated: 254722524741
+2025-11-11 09:21:23 - Initiating STK Push with amount: 20000
+2025-11-11 09:21:25 - STK Response: Array
+(
+    [MerchantRequestID] => ae2c-4229-8b38-be2dc0c1615e11171
+    [CheckoutRequestID] => ws_CO_11112025122124518722524741
+    [ResponseCode] => 0
+    [ResponseDescription] => Success. Request accepted for processing
+    [CustomerMessage] => Success. Request accepted for processing
+)
+
+2025-11-11 09:21:25 - Transaction record created
+2025-11-11 09:21:25 - Order updated with checkout request ID
+2025-11-11 09:21:25 - Payment initiated successfully
+2025-11-11 09:21:25 - === DASHBOARD ACCESSED ===
+2025-11-11 09:21:25 - Loading required files
+2025-11-11 09:21:25 - Required files loaded successfully
+2025-11-11 09:21:25 - MpesaService loaded successfully
+2025-11-11 09:21:25 - User ID: 1
+2025-11-11 09:21:25 - User orders: 2, Events: 1
+2025-11-11 09:21:25 - Rendering dashboard page
+2025-11-11 09:21:30 - === DASHBOARD ACCESSED ===
+2025-11-11 09:21:30 - Loading required files
+2025-11-11 09:21:30 - Required files loaded successfully
+2025-11-11 09:21:30 - MpesaService loaded successfully
+2025-11-11 09:21:30 - User ID: 1
+2025-11-11 09:21:30 - User orders: 2, Events: 1
+2025-11-11 09:21:30 - Rendering dashboard page
+2025-11-11 09:21:35 - === DASHBOARD ACCESSED ===
+2025-11-11 09:21:35 - Loading required files
+2025-11-11 09:21:35 - Required files loaded successfully
+2025-11-11 09:21:36 - MpesaService loaded successfully
+2025-11-11 09:21:36 - User ID: 1
+2025-11-11 09:21:36 - User orders: 2, Events: 1
+2025-11-11 09:21:36 - Rendering dashboard page
+2025-11-11 09:22:54 - === DASHBOARD ACCESSED ===
+2025-11-11 09:22:54 - Loading required files
+2025-11-11 09:22:54 - Required files loaded successfully
+2025-11-11 09:22:54 - MpesaService loaded successfully
+2025-11-11 09:22:54 - User ID: 1
+2025-11-11 09:22:54 - User orders: 2, Events: 1
+2025-11-11 09:22:54 - Rendering dashboard page
+2025-11-11 09:22:59 - === DASHBOARD ACCESSED ===
+2025-11-11 09:22:59 - Loading required files
+2025-11-11 09:22:59 - Required files loaded successfully
+2025-11-11 09:22:59 - MpesaService loaded successfully
+2025-11-11 09:22:59 - User ID: 1
+2025-11-11 09:22:59 - User orders: 2, Events: 1
+2025-11-11 09:22:59 - Rendering dashboard page
+2025-11-11 09:23:03 - === DASHBOARD ACCESSED ===
+2025-11-11 09:23:03 - Loading required files
+2025-11-11 09:23:03 - Required files loaded successfully
+2025-11-11 09:23:03 - MpesaService loaded successfully
+2025-11-11 09:23:03 - User ID: 1
+2025-11-11 09:23:03 - User orders: 2, Events: 1
+2025-11-11 09:23:03 - POST request received: Array
+(
+    [order_id] => 2
+    [quantity] => 1
+    [update_order] => 
+)
+
+2025-11-11 09:23:03 - Updating order quantity...
+2025-11-11 09:23:03 - Order updated successfully: #3
+2025-11-11 09:23:03 - === DASHBOARD ACCESSED ===
+2025-11-11 09:23:03 - Loading required files
+2025-11-11 09:23:03 - Required files loaded successfully
+2025-11-11 09:23:03 - MpesaService loaded successfully
+2025-11-11 09:23:03 - User ID: 1
+2025-11-11 09:23:03 - User orders: 3, Events: 1
+2025-11-11 09:23:03 - Rendering dashboard page
+2025-11-11 09:23:08 - === DASHBOARD ACCESSED ===
+2025-11-11 09:23:08 - Loading required files
+2025-11-11 09:23:08 - Required files loaded successfully
+2025-11-11 09:23:08 - MpesaService loaded successfully
+2025-11-11 09:23:08 - User ID: 1
+2025-11-11 09:23:08 - User orders: 3, Events: 1
+2025-11-11 09:23:08 - Rendering dashboard page
+2025-11-11 09:23:13 - === DASHBOARD ACCESSED ===
+2025-11-11 09:23:13 - Loading required files
+2025-11-11 09:23:13 - Required files loaded successfully
+2025-11-11 09:23:13 - MpesaService loaded successfully
+2025-11-11 09:23:13 - User ID: 1
+2025-11-11 09:23:13 - User orders: 3, Events: 1
+2025-11-11 09:23:13 - Rendering dashboard page
+2025-11-11 09:23:21 - === DASHBOARD ACCESSED ===
+2025-11-11 09:23:21 - Loading required files
+2025-11-11 09:23:21 - Required files loaded successfully
+2025-11-11 09:23:21 - MpesaService loaded successfully
+2025-11-11 09:23:21 - User ID: 1
+2025-11-11 09:23:21 - User orders: 3, Events: 1
+2025-11-11 09:23:21 - Rendering dashboard page
+2025-11-11 09:27:11 - === DASHBOARD ACCESSED ===
+2025-11-11 09:27:11 - Loading required files
+2025-11-11 09:27:11 - Required files loaded successfully
+2025-11-11 09:27:11 - MpesaService loaded successfully
+2025-11-11 09:27:11 - User ID: 1
+2025-11-11 09:27:11 - User orders: 3, Events: 1
+2025-11-11 09:27:11 - Rendering dashboard page
+2025-11-11 09:27:15 - === DASHBOARD ACCESSED ===
+2025-11-11 09:27:15 - Loading required files
+2025-11-11 09:27:15 - Required files loaded successfully
+2025-11-11 09:27:15 - MpesaService loaded successfully
+2025-11-11 09:27:15 - User ID: 1
+2025-11-11 09:27:15 - User orders: 3, Events: 1
+2025-11-11 09:27:15 - Rendering dashboard page
+2025-11-11 09:27:17 - === DASHBOARD ACCESSED ===
+2025-11-11 09:27:17 - Loading required files
+2025-11-11 09:27:17 - Required files loaded successfully
+2025-11-11 09:27:17 - MpesaService loaded successfully
+2025-11-11 09:27:17 - User ID: 1
+2025-11-11 09:27:17 - User orders: 3, Events: 1
+2025-11-11 09:27:17 - Rendering dashboard page
+2025-11-11 09:27:23 - === DASHBOARD ACCESSED ===
+2025-11-11 09:27:23 - Loading required files
+2025-11-11 09:27:23 - Required files loaded successfully
+2025-11-11 09:27:23 - MpesaService loaded successfully
+2025-11-11 09:27:23 - User ID: 1
+2025-11-11 09:27:23 - User orders: 3, Events: 1
+2025-11-11 09:27:23 - Rendering dashboard page
+2025-11-11 09:27:28 - === DASHBOARD ACCESSED ===
+2025-11-11 09:27:28 - Loading required files
+2025-11-11 09:27:28 - Required files loaded successfully
+2025-11-11 09:27:28 - MpesaService loaded successfully
+2025-11-11 09:27:28 - User ID: 1
+2025-11-11 09:27:28 - User orders: 3, Events: 1
+2025-11-11 09:27:28 - Rendering dashboard page
+2025-11-11 09:27:33 - === DASHBOARD ACCESSED ===
+2025-11-11 09:27:33 - Loading required files
+2025-11-11 09:27:33 - Required files loaded successfully
+2025-11-11 09:27:33 - MpesaService loaded successfully
+2025-11-11 09:27:33 - User ID: 1
+2025-11-11 09:27:33 - User orders: 3, Events: 1
+2025-11-11 09:27:33 - Rendering dashboard page
+2025-11-11 09:37:52 - === DASHBOARD ACCESSED ===
+2025-11-11 09:37:52 - Loading required files
+2025-11-11 09:37:52 - Required files loaded successfully
+2025-11-11 09:37:52 - MpesaService loaded successfully
+2025-11-11 09:37:52 - User ID: 3
+2025-11-11 09:37:52 - User orders: 0, Events: 1
+2025-11-11 09:37:52 - Rendering dashboard page
+2025-11-11 09:38:06 - === DASHBOARD ACCESSED ===
+2025-11-11 09:38:06 - Loading required files
+2025-11-11 09:38:06 - Required files loaded successfully
+2025-11-11 09:38:06 - MpesaService loaded successfully
+2025-11-11 09:38:06 - User ID: 3
+2025-11-11 09:38:06 - User orders: 0, Events: 1
+2025-11-11 09:38:06 - POST request received: Array
+(
+    [create_order] => 1
+    [event_id] => 1
+    [quantity] => 3
+)
+
+2025-11-11 09:38:06 - Creating order...
+2025-11-11 09:38:06 - Order created successfully: #4
+2025-11-11 09:38:06 - === DASHBOARD ACCESSED ===
+2025-11-11 09:38:06 - Loading required files
+2025-11-11 09:38:06 - Required files loaded successfully
+2025-11-11 09:38:06 - MpesaService loaded successfully
+2025-11-11 09:38:06 - User ID: 3
+2025-11-11 09:38:06 - User orders: 1, Events: 1
+2025-11-11 09:38:06 - Rendering dashboard page
+2025-11-11 10:12:05 - === DASHBOARD ACCESSED ===
+2025-11-11 10:12:05 - Loading required files
+2025-11-11 10:12:05 - Required files loaded successfully
+2025-11-11 10:12:05 - MpesaService loaded successfully
+2025-11-11 10:12:05 - User ID: 1
+2025-11-11 10:12:05 - User orders: 3, Events: 1
+2025-11-11 10:12:05 - Rendering dashboard page

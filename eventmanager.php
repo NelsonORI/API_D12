@@ -49,7 +49,8 @@ class EventManager {
 
     // Get event by ID
     public function getEventById($id) {
-        $stmt = $this->pdo->prepare("SELECT e.*, i.tickets_available, i.tickets_sold FROM event e LEFT JOIN inventory i ON e.id = i.event_id WHERE e.id = ?");
+        // ERROR RECTIFICATION: Changed 'inventory' to 'inventories' in the JOIN clause
+        $stmt = $this->pdo->prepare("SELECT e.*, i.tickets_available, i.tickets_sold FROM event e LEFT JOIN inventories i ON e.id = i.event_id WHERE e.id = ?");
         $stmt->execute([$id]);
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }

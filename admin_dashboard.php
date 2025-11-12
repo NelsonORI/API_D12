@@ -16,8 +16,42 @@ $userManager = new UserManager($pdo);
 $eventManager = new EventManager($pdo);
 $orderManager = new OrderManager($pdo);
 
+// [START CHANGE: AJAX ENDPOINT FOR REAL-TIME DATA]
+// Handle AJAX Request for Real-time Chart Data
+if (isset($_GET['fetch_data']) && $_GET['fetch_data'] == 'chart') {
+    // Fetch all orders
+    $orders = $orderManager->getAllOrders(); 
+    
+    $monthlyOrders = [];
+    foreach ($orders as $order) {
+        if ($order['status'] === 'confirmed') {
+            // Get date parts for grouping and display
+            $month = date('Y-m', strtotime($order['order_date']));
+            $monthName = date('M', strtotime($order['order_date']));
+            
+            if (!isset($monthlyOrders[$month])) {
+                $monthlyOrders[$month] = ['month' => $monthName, 'count' => 0];
+            }
+            $monthlyOrders[$month]['count']++;
+        }
+    }
+    // Sort by month (key Y-m) to ensure correct chart order
+    ksort($monthlyOrders);
+    
+    $response = [
+        'labels' => array_column($monthlyOrders, 'month'),
+        'data' => array_column($monthlyOrders, 'count')
+    ];
+
+    header('Content-Type: application/json');
+    echo json_encode($response);
+    exit;
+}
+// [END CHANGE: AJAX ENDPOINT FOR REAL-TIME DATA]
+
 // Handle actions
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+// ... (POST handling logic remains unchanged) ...
     $action = $_POST['action'] ?? '';
     $entity = $_POST['entity'] ?? '';
     
@@ -132,6 +166,27 @@ if (isset($_GET['edit_user'])) {
     $stmt->execute([$userId]);
     $editUser = $stmt->fetch(PDO::FETCH_ASSOC);
 }
+
+// [START CHANGE: INITIAL CHART DATA PREPARATION]
+$monthlyOrders = [];
+foreach ($orders as $order) {
+    if ($order['status'] === 'confirmed') {
+        $month = date('Y-m', strtotime($order['order_date']));
+        $monthName = date('M', strtotime($order['order_date']));
+        
+        if (!isset($monthlyOrders[$month])) {
+            $monthlyOrders[$month] = ['month' => $monthName, 'count' => 0];
+        }
+        $monthlyOrders[$month]['count']++;
+    }
+}
+ksort($monthlyOrders);
+$initialChartData = [
+    'labels' => array_column($monthlyOrders, 'month'),
+    'data' => array_column($monthlyOrders, 'count')
+];
+$initialChartDataJson = json_encode($initialChartData);
+// [END CHANGE: INITIAL CHART DATA PREPARATION]
 ?>
 
 <!DOCTYPE html>
@@ -141,6 +196,7 @@ if (isset($_GET['edit_user'])) {
     <title>Admin Dashboard | Tickyfii</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         .sidebar {
             min-height: 100vh;
@@ -167,12 +223,16 @@ if (isset($_GET['edit_user'])) {
         .border-left-success { border-left-color: #28a745 !important; }
         .border-left-warning { border-left-color: #ffc107 !important; }
         .border-left-info { border-left-color: #17a2b8 !important; }
+        
+        /* Style for the chart container */
+        .chart-container {
+            height: 300px; /* fixed height for better chart display */
+        }
     </style>
 </head>
 <body>
     <div class="container-fluid">
         <div class="row">
-            <!-- Sidebar -->
             <nav class="col-md-3 col-lg-2 sidebar p-3">
                 <h4 class="text-center mb-4">Admin Panel</h4>
                 <ul class="nav flex-column">
@@ -199,9 +259,7 @@ if (isset($_GET['edit_user'])) {
                 </ul>
             </nav>
 
-            <!-- Main Content -->
             <main class="col-md-9 ms-sm-auto col-lg-10 px-4">
-                <!-- Header -->
                 <div class="d-flex justify-content-between align-items-center pt-3 pb-2 mb-3 border-bottom">
                     <h2>Admin Dashboard</h2>
                     <div>
@@ -210,7 +268,6 @@ if (isset($_GET['edit_user'])) {
                     </div>
                 </div>
 
-                <!-- Messages -->
                 <?php if (isset($_SESSION['message'])): ?>
                     <div class="alert alert-success alert-dismissible fade show">
                         <?= $_SESSION['message'] ?>
@@ -227,7 +284,6 @@ if (isset($_GET['edit_user'])) {
                     <?php unset($_SESSION['error']); ?>
                 <?php endif; ?>
 
-                <!-- Dashboard Tab -->
                 <?php if ($currentTab == 'dashboard'): ?>
                     <div class="row mb-4">
                         <div class="col-md-3 mb-3">
@@ -263,9 +319,22 @@ if (isset($_GET['edit_user'])) {
                             </div>
                         </div>
                     </div>
-
-                <!-- Users Tab -->
-                <?php elseif ($currentTab == 'users'): ?>
+                    
+                    <div class="row mb-4">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header bg-primary text-white">
+                                    <i class="fas fa-chart-line"></i> Monthly Confirmed Orders Trend (Real-time)
+                                </div>
+                                <div class="card-body">
+                                    <div class="chart-container">
+                                        <canvas id="ordersChart"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <?php elseif ($currentTab == 'users'): ?>
                     <div class="d-flex justify-content-between mb-3">
                         <h3>User Management</h3>
                         <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#userModal">
@@ -318,7 +387,6 @@ if (isset($_GET['edit_user'])) {
                         </table>
                     </div>
 
-                <!-- Events Tab -->
                 <?php elseif ($currentTab == 'events'): ?>
                     <div class="d-flex justify-content-between mb-3">
                         <h3>Event Management</h3>
@@ -376,7 +444,6 @@ if (isset($_GET['edit_user'])) {
                         </table>
                     </div>
 
-                <!-- Orders Tab -->
                 <?php elseif ($currentTab == 'orders'): ?>
                     <h3>Order Management</h3>
                     <div class="table-responsive">
@@ -429,7 +496,6 @@ if (isset($_GET['edit_user'])) {
         </div>
     </div>
 
-    <!-- Event Modal -->
     <div class="modal fade" id="eventModal" tabindex="-1">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -484,7 +550,6 @@ if (isset($_GET['edit_user'])) {
         </div>
     </div>
 
-    <!-- User Modal -->
     <div class="modal fade" id="userModal" tabindex="-1">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -538,7 +603,6 @@ if (isset($_GET['edit_user'])) {
         </div>
     </div>
 
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     
     <script>
@@ -573,6 +637,93 @@ if (isset($_GET['edit_user'])) {
                 }
             });
         }
+        
+        // [START CHANGE: CHART INITIALIZATION AND REAL-TIME POLLING]
+        <?php if ($currentTab == 'dashboard'): ?>
+            const initialChartData = <?php echo $initialChartDataJson; ?>;
+            const chartCtx = document.getElementById('ordersChart');
+            let ordersChart = null;
+
+            function initializeChart(data) {
+                // Destroy old chart instance if it exists to prevent overlap
+                if (ordersChart) {
+                    ordersChart.destroy();
+                }
+
+                ordersChart = new Chart(chartCtx, {
+                    type: 'bar',
+                    data: {
+                        labels: data.labels,
+                        datasets: [{
+                            label: 'Confirmed Orders',
+                            data: data.data,
+                            backgroundColor: 'rgba(0, 123, 255, 0.7)', // Bootstrap Primary
+                            borderColor: 'rgba(0, 123, 255, 1)',
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                display: false
+                            }
+                        },
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                title: {
+                                    display: true,
+                                    text: 'Number of Orders'
+                                },
+                                ticks: {
+                                    // Ensure y-axis ticks are whole numbers
+                                    stepSize: 1 
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+
+            function fetchAndUpdateChart() {
+                // Fetch data from the server using the dedicated endpoint
+                const url = window.location.pathname + '?tab=dashboard&fetch_data=chart';
+                
+                fetch(url)
+                    .then(response => {
+                        // Check if the response is valid JSON before parsing
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok');
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        if (ordersChart) {
+                            // Update existing chart data
+                            ordersChart.data.labels = data.labels;
+                            ordersChart.data.datasets[0].data = data.data;
+                            ordersChart.update();
+                        } else {
+                            // Initialize chart if it didn't render initially (shouldn't happen with the PHP echo)
+                            initializeChart(data);
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error fetching real-time chart data:', error);
+                        // Optionally display an error message on the dashboard
+                    });
+            }
+
+            // 1. Initialize chart on page load
+            initializeChart(initialChartData);
+
+            // 2. Implement "real-time" polling (updates every 10 seconds)
+            // This only runs when the 'dashboard' tab is active
+            setInterval(fetchAndUpdateChart, 10000); 
+        <?php endif; ?>
+        // [END CHANGE: CHART INITIALIZATION AND REAL-TIME POLLING]
     });
     </script>
 </body>
